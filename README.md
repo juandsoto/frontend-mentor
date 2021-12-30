@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/juandsoto/frontend-mentor/tree/stats-preview-card-component](https://github.com/juandsoto/frontend-mentor/tree/stats-preview-card-component)
-- Live Site URL: [https://fm-stats-preview-card-component.netlify.app](https://fm-stats-preview-card-component.netlify.app)
+- Live Site URL: [https://fm-stats-preview-card-component-jdsc.netlify.app/](https://fm-stats-preview-card-component-jdsc.netlify.app/)
 
 ## My process
 
