@@ -23,7 +23,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [https://github.com/juandsoto/frontend-mentor/tree/order-summary-component](https://github.com/juandsoto/frontend-mentor/tree/order-summary-component)
+- Solution URL: [https://github.com/juandsoto/frontend-mentor/tree/profile-card-component](https://github.com/juandsoto/frontend-mentor/tree/profile-card-component)
 - Live Site URL: [https://fm-profile-card-component-jdsc.netlify.app](https://fm-profile-card-component-jdsc.netlify.app)
 
 ### Built with
