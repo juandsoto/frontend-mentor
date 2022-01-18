@@ -1,118 +1,141 @@
 *,
-*::before,
-*::after {
+*::after,
+*::before {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
 :root {
-	--Bright-orange: hsl(31, 77%, 52%);
-	--Dark-cyan: hsl(184, 100%, 22%);
-	--Very-dark-cyan: hsl(179, 100%, 13%);
-	--Transparent-white/*(paragraphs)*/: hsla(0, 0%, 100%, 0.75);
-	--Very-light-gray/*(background, headings, buttons)*/: hsl(0, 0%, 95%);
+	--Dark-cyan: hsl(185, 75%, 39%);
+	--Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+	--Dark-grayish-blue: hsl(227, 10%, 46%);
+	--Dark-gray: hsl(0, 0%, 59%);
 }
 
 body {
-	width: 100%;
-	padding: 5.5rem 0;
-	background-color: var(--Very-light-gray);
-	/* height: 100vh; */
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-family: 'Big Shoulders Display', cursive;
-	/* font-size: 15px; */
+	font-family: 'Kumbh Sans', sans-serif;
+	background-color: var(--Dark-cyan);
+	overflow: hidden;
+	font-size: 18px;
 }
 
-.cards {
+main {
+	height: 100vh;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.container::before {
+	content: url(images/bg-pattern-top.svg);
+	position: absolute;
+	bottom: 50%;
+	right: 50%;
+	z-index: -1;
+}
+.container::after {
+	content: url(images/bg-pattern-bottom.svg);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: -2;
+}
+.card {
+	width: 25rem;
+	height: 26rem;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
-	border-radius: 10px;
+	background-color: white;
+	border-radius: 20px;
 	overflow: hidden;
 }
 
-.card {
-	width: 330px;
-	height: 445px;
-	padding: 2.8rem;
+.card--top {
+	width: 100%;
+	height: 35%;
+	background: url(images/bg-pattern-card.svg);
 }
 
-.card-title {
-	text-transform: uppercase;
-	padding-top: 1.8rem;
-	font-size: 2.5rem;
-	color: var(--Very-light-gray);
+.card--bottom {
+	width: 100%;
+	height: 65%;
 }
 
-.card-text {
-	font-family: 'Lexend Deca', sans-serif;
-	padding: 1.6rem 0;
-	line-height: 1.5rem;
-	color: var(--Transparent-white);
+.card--img {
+	width: 7rem;
+	height: 7rem;
+	margin: -3.5rem auto;
+	border-radius: 50%;
+	border: 5px solid white;
+	overflow: hidden;
 }
 
-.card-button {
-	background-color: var(--Very-light-gray);
-	border: none;
-	border-radius: 30px;
+.card--img img {
+	width: 100%;
+}
+
+.card--body {
+	padding-top: 2.5rem;
+	height: 100%;
+}
+.card--text {
+	text-align: center;
+	width: 9rem;
+	padding: 2rem 0;
+	margin: auto;
+	font-weight: 700;
+}
+.card--text span {
+	font-size: 16px;
+	font-weight: normal;
+	color: var(--Dark-gray);
+}
+
+.card--footer {
+	border-top: 1px solid var(--Dark-gray);
+	display: flex;
+	padding-top: 2rem;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+
+.card--status {
+	font-size: 0.8rem;
+	letter-spacing: 2px;
+	color: var(--Dark-grayish-blue);
+}
+
+.card--status span {
+	font-size: 18px;
+	display: block;
 	font-size: 1rem;
-	padding: 0.9rem 1.7rem;
-	color: white;
-	text-transform: capitalize;
-	border: 2px solid var(--Transparent-white);
-	transition: background-color 0.2s ease-in-out;
+	letter-spacing: 1px;
+	color: black;
+	font-weight: 700;
+	margin-bottom: 4px;
 }
 
-.card-button:hover {
-	cursor: pointer;
-	color: var(--Transparent-white) !important;
-	background-color: transparent;
-}
-
-.card-1 {
-	background-color: var(--Bright-orange);
-}
-
-.card-1 .card-button {
-	color: var(--Bright-orange);
-}
-
-.card-2 {
-	background-color: var(--Dark-cyan);
-}
-.card-2 .card-button {
-	color: var(--Dark-cyan);
-}
-
-.card-3 {
-	background-color: var(--Very-dark-cyan);
-}
-.card-3 .card-button {
-	color: var(--Very-dark-cyan);
-}
-
-@media screen and (min-width: 1440px) {
-	body {
-		height: 100vh;
+@media screen and (max-width: 480px) {
+	.container::before {
+		bottom: 50%;
+		right: 40%;
 	}
-
-	.cards {
-		margin: 0;
-		flex-direction: row;
+	.container::after {
+		top: 50%;
+		left: 40%;
 	}
-
+	.container {
+		padding: 0 1rem;
+	}
 	.card {
-		height: auto;
-	}
-
-	.card-text {
-		padding-right: 1rem;
-	}
-	.card-button {
-		margin: 4rem 0 1rem 0;
+		width: 20rem;
 	}
 }
